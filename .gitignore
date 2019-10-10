@@ -1,0 +1,6 @@
+.DS_STORE
+
+# Users will be installing the latest versions, so any tests should
+# avoid lock files so we can catch regressions in the ecosystem.
+package-lock.json
+yarn.lock
