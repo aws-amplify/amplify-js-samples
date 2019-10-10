@@ -4,3 +4,7 @@
 # avoid lock files so we can catch regressions in the ecosystem.
 package-lock.json
 yarn.lock
+
+# Ignore private files that my otherwise be included (even accidentally)
+aws-exports.js
+team-provider-info.json
