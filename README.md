@@ -1,4 +1,4 @@
-# Amplify Js Samples
+# Amplify JS Samples
 
 ## Frameworks
 
