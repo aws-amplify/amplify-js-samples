@@ -5,19 +5,19 @@
 ### Angular
 
 - Auth
-  - [`with-authenticator`](./angular/auth/with-authenticator)
+  - [`authenticator`](./angular/auth/authenticator)
 
 ### React
 
 - Auth
-  - [`with-authenticator`](./react/auth/with-authenticator)
+  - [`authenticator`](./react/auth/authenticator)
 - Multi-category
-  - [Photo Albums](./react/multi-category/with-authenticator)
+  - [Photo Albums](./react/multi-category/authenticator)
 
 ### Vue
 
 - Auth
-  - [`with-authenticator`](./vue/auth/with-authenticator)
+  - [`authenticator`](./vue/auth/authenticator)
 
 ## License
 
