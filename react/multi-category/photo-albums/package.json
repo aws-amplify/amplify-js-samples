@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "aws-amplify": "unstable",
-    "aws-amplify-react": "unstable",
+    "aws-amplify": "latest",
+    "aws-amplify-react": "latest",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
