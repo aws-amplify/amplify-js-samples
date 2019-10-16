@@ -1,0 +1,14 @@
+.DS_STORE
+
+# Users will be installing the latest versions, so any tests should
+# avoid lock files so we can catch regressions in the ecosystem.
+package-lock.json
+yarn.lock
+
+# Ignore private files that my otherwise be included (even accidentally)
+aws-exports.js
+team-provider-info.json
+
+# `amplify init` auto-creates .gitignore with `/node_modules`.
+# This ignores node_modules *anywhere*.
+node_modules
