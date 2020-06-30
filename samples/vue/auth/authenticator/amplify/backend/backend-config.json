@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"publicvueauthcomp6994b8e7": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}
