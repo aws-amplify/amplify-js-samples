@@ -48,7 +48,7 @@ Using `AuthState` we can check if a user is authenticated and signed in: `AuthSt
 <img src={logo} className="App-logo" alt="logo" />
 <AmplifySignOut />
 ```
-Notice, we also provide a way for users to signout, ia the [signout component](https://docs.amplify.aws/ui/auth/authenticator/q/framework/react#sign-out).
+Notice, we also provide a way for users to signout, is the [signout component](https://docs.amplify.aws/ui/auth/authenticator/q/framework/react#sign-out).
 
 If a user isn’t signed in, let’s display the `AmplifyAuthenticator`: 
 
