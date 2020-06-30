@@ -15,7 +15,7 @@ We have bootstrapped this application using the [Angular CLI](https://cli.angula
 ## Setup
 
 1. Login or [Create](https://portal.aws.amazon.com/billing/signup?type=enterprise#/start) an AWS Account.
-2. In a terminal, clone this repo
+2. In a terminal, clone this repo.
 3. Install the [Amplify CLI](https://github.com/aws-amplify/amplify-cli) `npm install -g @aws-amplify/cli`. Ensure you are in the directory you just cloned.
 4. If it’s your first time using the CLI, you will need to configure it by running `amplify configure`. Follow the instructions to create an IAM profile locally.
 5. Now let’s initialize an Amplify project in this directory. `amplify init`
