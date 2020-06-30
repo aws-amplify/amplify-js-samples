@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"angauthenticator98214054": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}
