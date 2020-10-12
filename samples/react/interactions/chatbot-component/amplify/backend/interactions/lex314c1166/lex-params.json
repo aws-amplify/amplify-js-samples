@@ -1,0 +1,120 @@
+{
+    "resourceName": "lex314c1166",
+    "intents": [
+        {
+            "cancelMessage": "Okay, I have cancelled your reservation in progress.",
+            "confirmationQuestion": "Okay, I have you down for a {CarType} rental in {PickUpCity} from {PickUpDate} to {ReturnDate}. Should I book the reservation?",
+            "slots": [
+                {
+                    "name": "PickUpCity",
+                    "type": "AMAZON.US_CITY",
+                    "prompt": "In what city do you need to rent a car?",
+                    "required": true,
+                    "customType": false
+                },
+                {
+                    "name": "PickUpDate",
+                    "type": "AMAZON.DATE",
+                    "prompt": "What day do you want to start your rental?",
+                    "required": true,
+                    "customType": false
+                },
+                {
+                    "name": "ReturnDate",
+                    "type": "AMAZON.DATE",
+                    "prompt": "What day do you want to return the car?",
+                    "required": true,
+                    "customType": false
+                },
+                {
+                    "name": "DriverAge",
+                    "type": "AMAZON.NUMBER",
+                    "prompt": "How old is the driver for this rental?",
+                    "required": true,
+                    "customType": false
+                },
+                {
+                    "name": "CarType",
+                    "type": "CarTypeValues",
+                    "prompt": "What type of car would you like to rent? Our most popular options are economy, midsize, and luxury",
+                    "required": true,
+                    "customType": true
+                }
+            ],
+            "utterances": [
+                "Make a car reservation",
+                "Reserve a car",
+                "Book a car"
+            ],
+            "intentName": "BookCar",
+            "newSlotTypes": [
+                {
+                    "slotType": "CarTypeValues",
+                    "slotTypeDescription": "Enumeration representing possible types of cars available for rental",
+                    "slotValues": [
+                        "standard",
+                        "full size",
+                        "midsize",
+                        "luxury",
+                        "economy",
+                        "minivan"
+                    ]
+                }
+            ]
+        },
+        {
+            "cancelMessage": "Okay, I have cancelled your reservation in progress.",
+            "confirmationQuestion": "Okay, I have you down for a {Nights} night stay in {Location} starting {CheckInDate}. Shall I book the reservation?",
+            "slots": [
+                {
+                    "name": "Location",
+                    "type": "AMAZON.US_CITY",
+                    "prompt": "What city will you be staying in?",
+                    "required": true,
+                    "customType": false
+                },
+                {
+                    "name": "CheckInDate",
+                    "type": "AMAZON.DATE",
+                    "prompt": "What day do you want to check in?",
+                    "required": true,
+                    "customType": false
+                },
+                {
+                    "name": "Nights",
+                    "type": "AMAZON.NUMBER",
+                    "prompt": "How many nights will you be staying?",
+                    "required": true,
+                    "customType": false
+                },
+                {
+                    "name": "RoomType",
+                    "type": "RoomTypeValues",
+                    "prompt": "What type of room would you like: queen, king or deluxe?",
+                    "required": true,
+                    "customType": true
+                }
+            ],
+            "utterances": [
+                "Book a {Nights} night stay in {Location}",
+                "I want a make hotel reservations",
+                "Book a hotel"
+            ],
+            "intentName": "BookHotel",
+            "newSlotTypes": [
+                {
+                    "slotType": "RoomTypeValues",
+                    "slotTypeDescription": "Enumeration representing possible types of a hotel room",
+                    "slotValues": [
+                        "deluxe",
+                        "queen",
+                        "king"
+                    ]
+                }
+            ]
+        }
+    ],
+    "outputVoice": "Matthew",
+    "botName": "BookTrip",
+    "coppa": false
+}

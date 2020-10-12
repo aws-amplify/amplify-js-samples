@@ -1,0 +1,17 @@
+{
+	"auth": {
+		"chatbotcomponentba96e577": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	},
+	"interactions": {
+		"lex314c1166": {
+			"service": "Lex",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
+	}
+}
