@@ -1,10 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { Amplify, Auth } from "aws-amplify";
+import { Amplify } from "aws-amplify";
 import config from "./aws-exports";
 import { withAuthenticator } from "aws-amplify-react-native";
-import { AuthState, onAuthUIStateChange } from "@aws-amplify/ui-components";
 import logo from './logo.svg';
 
 Amplify.configure({
