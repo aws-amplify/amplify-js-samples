@@ -6,7 +6,11 @@ In this example, we will use the [withAuthenticator UI Component](https://docs.a
 
 We have bootstrapped this application using [Expo](https://github.com/expo/expo) and will focus on the logic that adds authentication.
 
-<img src="https://amplify-demo-assets.s3.amazonaws.com/screenshot.png" alt="screenshot" height="400px"/>
+### web
+<img src="https://i.imgur.com/quleXGx.png" alt="screenshot"/>
+
+### iOS
+<img src="https://i.imgur.com/lN84Vlo.png" alt="screenshot" height="400px"/>
 
 ## Let's Get Started!
 
