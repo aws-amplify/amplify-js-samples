@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "yarn serve"
+    "start": "npm run serve"
   },
   "dependencies": {
     "@aws-amplify/ui-vue": "^0.2.8",
