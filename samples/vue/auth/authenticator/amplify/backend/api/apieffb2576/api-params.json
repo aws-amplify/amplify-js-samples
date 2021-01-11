@@ -1,0 +1,42 @@
+{
+    "paths": [
+        {
+            "name": "/v1/rest/test",
+            "lambdaFunction": "archive",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            },
+            "policyResourceName": "/v1/rest/test"
+        }
+    ],
+    "resourceName": "apieffb2576",
+    "apiName": "apieffb2576",
+    "functionArns": [
+        {
+            "lambdaFunction": "archive"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-publicvueauthcomp-dev-131141-authRole",
+        "unAuthRoleName": "amplify-publicvueauthcomp-dev-131141-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "archive",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

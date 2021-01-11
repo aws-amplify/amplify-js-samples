@@ -6,6 +6,9 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
+    <h1>Test Button</h1>
+    <button @click="testIt()">Test Me</button>
+
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
@@ -35,6 +38,20 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  methods: { 
+    testIt() {
+      fetch('https://po5d735ajg.execute-api.us-east-2.amazonaws.com/dev', {
+        method: 'GET',
+        mode: 'cors',
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      })
+        .then(response => response.json())
+        .then(data => console.log(data));
+    }
   }
 }
 </script>
