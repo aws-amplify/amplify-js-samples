@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Displaying a map using Amplify Geo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Amplify Geo](https://docs.amplify.aws/lib/geo/getting-started/q/platform/js/) is a library that provides APIs and map UI components for maps and location search for JavaScript-based web apps.
 
-## Available Scripts
+## What is this app?
 
-In the project directory, you can run:
+In this example, we used [Display Map Tutorial](https://docs.amplify.aws/lib/geo/maps/q/platform/js/) to create a simple app that displays a map.
 
-### `yarn start`
+We have bootstrapped this application using [Create React App](https://github.com/facebook/create-react-app) and will focus on the logic needed to add a map to your application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Disclaimer
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This app is not meant to be copied and run out of the box. It will get you most of the way there but you will need to use the Amplify provision your own Amplify Map resources and create an `aws-exports.js` file. Attempting to run this application as is will fail due to the missing `aws-exports` file.
 
-### `yarn test`
+## How to Provision your own Amplify Map Resources
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Copy this project into your own workspace
+- Install Amplify CLI
+  - `npm i -g @aws-amplify/cli`
+- Create a new Amplify project
+  - `amplify init`
+- Create Geo resources
+  - `amplify add geo`
+  - Refer to [Amplify Geo CLI docs](https://docs.amplify.aws/cli/geo/maps/) for more detailed instructions on options
+- Publish changes
+  - `amplify push`
 
-### `yarn build`
+## Next Steps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Read more of our [Geo documentation](https://docs.amplify.aws/lib/geo/maps/q/platform/js/) to further customize your app. There are many advanced use cases to build upon.
+- Join our communities on [Twitter](https://twitter.com/awsamplify) and [Discord](https://discord.gg/amplify)
