@@ -1,0 +1,78 @@
+{
+  "auth": {
+    "geofencecontrolmap77dc1a87": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      }
+    },
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "geofencecontrolmap77dc1a87",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ]
+    }
+  },
+  "geo": {
+    "map51e71ba7": {
+      "isDefault": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Map",
+      "mapStyle": "VectorEsriStreets",
+      "pricingPlan": "RequestBasedUsage",
+      "accessType": "AuthorizedAndGuestUsers"
+    },
+    "geofenceCollection3b002ef5": {
+      "isDefault": true,
+      "providerPlugin": "awscloudformation",
+      "service": "GeofenceCollection",
+      "dataProvider": "Esri",
+      "pricingPlan": "RequestBasedUsage",
+      "accessType": "CognitoGroups",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "geofencecontrolmap77dc1a87",
+          "attributes": [
+            "UserPoolId"
+          ]
+        },
+        {
+          "category": "auth",
+          "resourceName": "userPoolGroups",
+          "attributes": [
+            "geofenceAdminGroupRole"
+          ]
+        }
+      ]
+    }
+  }
+}
