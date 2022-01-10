@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./state-container.css";
 
 export default function StateManagement() {

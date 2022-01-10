@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Auth } from "aws-amplify";
+import { Auth } from "@aws-amplify/auth";
 import { Button, PasswordField, TextField } from "@aws-amplify/ui-react";
 import "./username-password.css";
 

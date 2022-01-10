@@ -1,12 +1,10 @@
 import { Button, TextField } from "@aws-amplify/ui-react";
 import { useState } from "react";
-import {Auth} from 'aws-amplify'
+import { Auth } from "@aws-amplify/auth";
 
 export default function SignUp() {
   const [username, setUsername] = useState("");
-  const [email, setEmail ] = useState("");
-
-  
+  const [email, setEmail] = useState("");
 
   return (
     <div>
@@ -27,7 +25,13 @@ export default function SignUp() {
         }}
       />
 
-      <Button onClick={()=>{console.log("danger")}}>Sign up </Button>
+      <Button
+        onClick={() => {
+          console.log("danger");
+        }}
+      >
+        Sign up{" "}
+      </Button>
     </div>
   );
 }

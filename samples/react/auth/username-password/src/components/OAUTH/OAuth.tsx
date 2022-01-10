@@ -1,6 +1,6 @@
 import { Button } from "@aws-amplify/ui-react";
 
-import { Auth } from "aws-amplify";
+import { Auth } from "@aws-amplify/auth";
 import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth";
 
 const OAuth: React.FC<{ className: string }> = (props) => {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import "./AppContainer.css";
-import { Auth } from "aws-amplify";
+import { Auth } from "@aws-amplify/auth";
 import { Authenticator, Button } from "@aws-amplify/ui-react";
 import UsernamePassword from "../Username-Password/SignIn/UsernamePassword";
 import OAuth from "../OAUTH/OAuth";
@@ -13,14 +13,25 @@ const AppContainer: React.FC = () => {
 
   useEffect(() => {
     async function fetchCurrUser() {
-      await Auth.currentAuthenticatedUser().then((user: any) => {
-        setCurrUser(user);
-      });
+      try {
+        await Auth.currentAuthenticatedUser().then((user: any) => {
+          setCurrUser(user);
+        });
+      } catch (error) {
+        console.log(error);
+      }
     }
 
     fetchCurrUser();
   }, []);
 
+  async function signOut() {
+    try {
+      await Auth.signOut();
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <div className="app-container">
       <h2>Amplify Auth Workbench</h2>
@@ -54,7 +65,7 @@ const AppContainer: React.FC = () => {
       <div className="login-container">
         {currentMode === "Authenticator" ? (
           <Authenticator className="authenticator-container">
-            {({ signOut, user }) => <AppHome />}
+            {() => <AppHome />}
           </Authenticator>
         ) : currentMode === "Username/Password" ? (
           <UsernamePassword className="sample-app-container" />
@@ -70,7 +81,7 @@ const AppContainer: React.FC = () => {
           backgroundColor={"orange"}
           color={"white"}
           width={"100%"}
-          onClick={async () => await Auth.signOut()}
+          onClick={signOut}
         >
           {" "}
           Sign out
