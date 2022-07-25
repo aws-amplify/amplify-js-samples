@@ -1,14 +1,12 @@
 # Authentication using an Amplify React Authenticator Component
 
-[Amplify UI Components](https://docs.amplify.aws/ui/q/framework/react) is an open-source toolkit that makes it easier for developers to add common use cases to their applications. The toolkit comes out of the box with a UI interface that is connected to Amplify’s backend services.
+[Amplify UI Components](https://ui.docs.amplify.aws/) is an open-source toolkit that makes it easier for developers to add common use cases to their applications. The toolkit comes out of the box with a UI interface that is connected to Amplify’s backend services.
 
 ## What Are We Building?
 
-In this example, we will use the [Authenticator UI Component](https://docs.amplify.aws/ui/auth/authenticator/q/framework/react) to allow users to signup and signin.
+In this example, we will use the [Authenticator UI Component](https://ui.docs.amplify.aws/react/connected-components/authenticator) to allow users to signup and signin.
 
 We have bootstrapped this application using [Create React App](https://github.com/facebook/create-react-app) and will focus on the logic that adds authentication.
-
-<img src="https://amplify-demo-assets.s3.amazonaws.com/screenshot.png" alt="screenshot" height="400px"/>
 
 ## Let's Get Started!
 
@@ -43,23 +41,33 @@ Now that you've built the app, let's take a look under the hood and explore how 
 
 Let's dive into the frontend components. In this app, the important logic is in `App.js`.
 
-Using `AuthState` we can check if a user is authenticated and signed in: `AuthState.SignedIn`. If this is true, we can route to a user dashboard component or simply display their name.
+Using `useAuthenticator` we can check the value of `authStatus`. If the value of `authStatus` is `authenticated`, we can route to a user dashboard component or, in this case, simply display their name.
 
 ```
-<div>Hello, {user.username}</div>
-<img src={logo} className="App-logo" alt="logo" />
-<AmplifySignOut />
+const App = () => {
+  const { user, authStatus, signOut } = useAuthenticator();
+
+  return (
+    <>
+      {authStatus === "authenticated" ? (
+        <div className="App">
+          <header className="App-header">
+            <div>Hello, {user.username}</div>
+            <img src={logo} className="App-logo" alt="logo" />
+            <button onClick={signOut}>Sign Out</button>
+          </header>
+        </div>
+      ) : (
+        <Authenticator />
+      )}
+    </>
+  );
+};
 ```
 
-Notice, we also provide a way for users to signout, is the [signout component](https://docs.amplify.aws/ui/auth/authenticator/q/framework/react#sign-out).
+Notice, we also provide a way for users to sign out via the `signOut` function which is also made available to us by the `useAuthenticator` hook.
 
-If a user isn’t signed in, let’s display the `AmplifyAuthenticator`:
-
-```
-<AmplifyContainer>
-  <AmplifyAuthenticator />
-</AmplifyContainer>
-```
+If a user isn’t signed in, we will render the `Authenticator` component instead.
 
 This works out of the box and displays a standard SignIn/SignOut interface for users.
 
