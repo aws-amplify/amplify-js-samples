@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import logo from "./logo.svg";
-import { Amplify } from "aws-amplify";
 import { Authenticator, useAuthenticator } from "@aws-amplify/ui-react";
 
 import "@aws-amplify/ui-react/styles.css";
