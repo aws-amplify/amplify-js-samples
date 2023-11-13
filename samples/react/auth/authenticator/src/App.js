@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import logo from './logo.svg';
-import Amplify from 'aws-amplify';
+import { Amplify } from 'aws-amplify'
 import {
 	AmplifyAuthenticator,
 	AmplifyContainer,
 	AmplifySignOut,
 } from '@aws-amplify/ui-react';
-import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components';
+import { AuthState, onAuthUIStateChange } from '@rology-aws-amplify/ui-components';
 import awsconfig from './aws-exports';
 
 Amplify.configure(awsconfig);
