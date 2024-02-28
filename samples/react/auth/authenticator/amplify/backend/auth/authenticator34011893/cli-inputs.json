@@ -1,14 +1,16 @@
 {
-    "identityPoolName": "authenticatordf03bc0b_identitypool_df03bc0b",
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "authenticator34011893_identitypool_34011893",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "authendf03bc0b",
-    "userPoolName": "authenticatordf03bc0b_userpool_df03bc0b",
+    "resourceNameTruncated": "authen34011893",
+    "userPoolName": "authenticator34011893_userpool_34011893",
     "autoVerifiedAttributes": [
-        "email"
+      "email"
     ],
     "mfaConfiguration": "OFF",
     "mfaTypes": [
-        "SMS Text Message"
+      "SMS Text Message"
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
@@ -18,33 +20,26 @@
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
-        "email"
+      "email"
     ],
-    "userpoolClientGenerateSecret": true,
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
-        "email"
+      "email"
     ],
     "userpoolClientReadAttributes": [
-        "email"
+      "email"
     ],
-    "userpoolClientLambdaRole": "authendf03bc0b_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "authen34011893_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "resourceName": "authenticatordf03bc0b",
+    "sharedId": "34011893",
+    "resourceName": "authenticator34011893",
     "authSelections": "identityPoolAndUserPool",
-    "authRoleArn": {
-        "Fn::GetAtt": [
-            "AuthRole",
-            "Arn"
-        ]
-    },
-    "unauthRoleArn": {
-        "Fn::GetAtt": [
-            "UnauthRole",
-            "Arn"
-        ]
-    },
     "useDefault": "default",
     "userPoolGroupList": [],
-    "dependsOn": []
+    "serviceName": "Cognito",
+    "usernameCaseSensitive": false,
+    "useEnabledMfas": true
+  }
 }
